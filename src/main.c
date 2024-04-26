@@ -1,14 +1,8 @@
-/*
- * Copyright (c) 2012-2014 Wind River Systems, Inc.
- *
- * SPDX-License-Identifier: Apache-2.0
- */
-
-#include <stdio.h>
-
-int main(void)
+void main(void)
 {
-	printf("Hello World! %s\n", CONFIG_BOARD_TARGET);
-
-	return 0;
+     while(1)
+     {
+         printk("Hello World! %s\n", CONFIG_BOARD);
+         k_sleep(K_SECONDS(1));
+     }
 }
